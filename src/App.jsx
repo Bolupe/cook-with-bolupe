@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Header';
 import RecipeCard from './RecipeCard';
 import StepCard from './StepCard'; // Import the StepCard component
-import steps from './steps'; // Import the steps data
+import steps from './Steps'; // Import the steps data
 
 function App() {
   const recipes = [
