@@ -9,15 +9,15 @@ function App() {
   const recipes = [
     {
       title: 'Boil',
-      imageUrl: '../assets/boil.jpg',
+      imageUrl: '/assets/boil.jpg',
     },
     {
       title: 'Fry',
-      imageUrl: '../assets/sauce.jpg',
+      imageUrl: '/assets/sauce.jpg',
     },
     {
       title: 'Mix',
-      imageUrl: '../assets/pasta.jpg',
+      imageUrl: '/assets/pasta.jpg',
     },
   ];
 
@@ -61,7 +61,7 @@ function App() {
      {/* GIF Image */}
      <div className="absolute bottom-0 left-0" style={{ zIndex: 999 }}>
         <img
-          src="../assets/giphy (2).gif"
+          src="/assets/giphy (2).gif"
           alt="GIF Image"
           width="150"
           height="150"
