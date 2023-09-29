@@ -1,0 +1,54 @@
+body {
+  background-image: url('../assets/spag.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/spag.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(3px); 
+  z-index: -1;
+}
+
+/* Add these classes for smooth transitions */
+.gif-transition-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.gif-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.gif-transition-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.gif-transition-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.gif-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
