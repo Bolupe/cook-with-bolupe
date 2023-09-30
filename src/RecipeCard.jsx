@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import StepCard from './StepCard';
 import { FaTimes } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
-const RecipeCard = ({ title, imageUrl, onViewStepsClick, step }) => {
+const RecipeCard = ({ title, imageUrl, step }) => {
   const [showSteps, setShowSteps] = useState(false);
 
   const handleViewStepsClick = () => {
@@ -42,6 +43,12 @@ const RecipeCard = ({ title, imageUrl, onViewStepsClick, step }) => {
       )}
     </div>
   );
+};
+
+RecipeCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  step: PropTypes.string.isRequired,
 };
 
 export default RecipeCard;

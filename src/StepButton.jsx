@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import StepCard from './StepCard'; 
-import steps from './steps'; 
-import { FaTimes } from 'react-icons/fa';
+import steps from './Steps'; 
+import PropTypes from 'prop-types'; // Import PropTypes
 
 const StepButton = ({ text }) => {
   const [selectedStep, setSelectedStep] = useState(null);
@@ -22,7 +22,7 @@ const StepButton = ({ text }) => {
   return (
     <div>
       <button
-        className="bg-orange-500 hover:bg-orange-700 text-white p-6 rounded transition duration-300 ease-in-out ml-8"
+        className="bg-orange-500 hover-bg-orange-700 text-white p-6 rounded transition duration-300 ease-in-out ml-8"
         onClick={handleButtonClick}
       >
         {text}
@@ -36,6 +36,11 @@ const StepButton = ({ text }) => {
       )}
     </div>
   );
+};
+
+// Define propTypes for the text prop
+StepButton.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default StepButton;
